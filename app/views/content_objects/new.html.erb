@@ -1,0 +1,16 @@
+<% form_for @content_object, :method => :post do |f| %>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name %>
+  <%= f.label :content, "File:" %>
+  <%= f.file_field :content %>
+  <%= f.label :thumbnail, "Thumbnail:" %>
+  <%= f.file_field :thumbnail %>
+  <%= f.label :description, "Description:" %>
+  <%= f.text_area :description %>
+  <%= f.label :homepage, "Homepage:" %>
+  <%= f.text_field :homepage %>
+  <%= f.label :video_url, "Video Url:" %>
+  <%= f.text_field :video_url %>
+
+  <%= submit_tag %>
+<% end %>

@@ -15,7 +15,7 @@ class ContentObjectsController < ApplicationController
 
   def create
     @content_object = ContentObject.new(params[:content_object])
-    #paperclip goes here
+    @content_object.user_id = @current_user.id
     if @content_object.save
       flash[:notice] = "Object successfully created"
     else

@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :account, :controller => "users"
   map.resources :users
   map.resources :password_resets
-  map.resources :content_objects, :as => '/'
+  map.resources :content_objects, :as => 'item'
   map.login '/login', :controller => :user_sessions, :action => :new
   map.logout '/logout', :controller => :user_sessions, :action => :destroy
   map.signup '/signup', :controller => :users, :action => :new
