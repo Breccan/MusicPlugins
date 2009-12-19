@@ -8,8 +8,8 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container" class="container_16">
-      <div class="header">
+    <div id="container">
+      <div id="header">
         <%- flash.each do |name, msg| -%>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         <%- end -%>
@@ -18,7 +18,7 @@
           <h1><%=h yield(:title) %></h1>
         <%- end -%>
 
-        <div class="login_details">
+        <div id="login">
           <% if @current_user %>
             Welcome <%= @current_user.login %>! Not you?
             <%= link_to "Log out", logout_path %>
@@ -29,13 +29,12 @@
         </div>
 
       </div>
-      <div class="grid_4 nav"> 
-        <h3> Navigation </h3>
-        <ul>
-          <li>Links go here. </li>
-        </ul>
-      </div>
-      <div class="content">
+      <h3> Navigation </h3>
+      <ul>
+        <li>Home</li>
+        <li>My Projects</li>
+      </ul>
+      <div id="content">
         <%= yield %>
       </div>
     </div>
