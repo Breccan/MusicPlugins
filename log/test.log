@@ -2,3 +2,23 @@
   [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
   [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "content_objects" ("name", "image_file_name", "created_at", "video_url", "image_file_size", "updated_at", "image_content_type", "user_id", "category_id", "homepage", "description", "content_content_type", "content_updated_at", "image_updated_at", "content_file_name", "content_file_size") VALUES(E'Footle', NULL, '2009-12-19 23:34:16.970899', NULL, NULL, '2009-12-19 23:34:16.970899', NULL, NULL, NULL, NULL, E'Cats', NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "content_objects" ("name", "image_file_name", "created_at", "video_url", "image_file_size", "updated_at", "image_content_type", "user_id", "category_id", "homepage", "description", "content_content_type", "content_updated_at", "image_updated_at", "content_file_name", "content_file_size") VALUES(NULL, NULL, '2009-12-19 23:34:16.989764', NULL, NULL, '2009-12-19 23:34:16.989764', NULL, NULL, NULL, NULL, E'cats', NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
