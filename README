@@ -1,10 +1,17 @@
-A simple base rails app with:
+Users
+Primary Object < --- >> Categories
 
-JQuery
-Authlogic(including login and password reset views)
-960 with nav panel/login/logout etc.
-Formtastic
-Multistage cap for apache
-Frozen rails at 2.3.4
-.gitignore
-spec-rails
+
+Design
+Home page (list of things, ordered by time)
+signup (email, name)
+login
+upload (thumbnail and patch)
+categories ((1) MFL (2) Audio FX racks (3) Midi FX Racks (4) Production Templates (5) DJ Templates (6) Controllerism))
+tags and tag filtering
+specific thing pages
+lists of things pages
+ratings for specific things
+capacity to "follow" or "favourite" a specific thing. Receive updates when it gets updated
+Develop database structure for users / posts?
+Twitter-based voting / charting system similar to one employed by Hypem?
