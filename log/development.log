@@ -99,3 +99,55 @@ ActionController::RoutingError (No route matches "/edit/id" with {:method=>:get}
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-12-20 11:13:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x1044d45b8>):
+  
+
+Rendered rescues/_trace (30.5ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-12-20 11:16:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x10435c730>):
+  
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-12-20 11:17:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x104461a90>):
+  
+
+Rendered rescues/_trace (30.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-12-20 11:22:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x1040b3b00>):
+  
+
+Rendered rescues/_trace (97.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
