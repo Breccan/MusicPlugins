@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   private
+  def redirect_back_or_default(path)
+    redirect_to :back
+  rescue ActionController::RedirectBackError
+    redirect_to path
+  end
+
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find
