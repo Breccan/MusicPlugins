@@ -1,0 +1,47 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20091003003201)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) DEFAULT E'' NOT NULL, "email" character varying(255) DEFAULT E'' NOT NULL, "crypted_password" character varying(255) DEFAULT E'' NOT NULL, "password_salt" character varying(255) DEFAULT E'' NOT NULL, "persistence_token" character varying(255) DEFAULT E'' NOT NULL, "single_access_token" character varying(255) DEFAULT E'' NOT NULL, "perishable_token" character varying(255) DEFAULT E'' NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" timestamp, "current_login_at" timestamp, "last_login_at" timestamp, "current_login_ip" character varying(255), "last_login_ip" character varying(255)) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091003003201')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddUsersPasswordResetFields (20091003043757)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (13.9ms)[0m   [0;1mCREATE INDEX "index_users_on_perishable_token" ON "users" ("perishable_token")[0m
+  [4;35;1mSQL (8.4ms)[0m   [0mCREATE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091003043757')[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT '' NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "crypted_password" varchar(255) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "persistence_token" varchar(255) DEFAULT '' NOT NULL, "single_access_token" varchar(255) DEFAULT '' NOT NULL, "perishable_token" varchar(255) DEFAULT '' NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255)) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE INDEX "index_users_on_perishable_token" ON "users" ("perishable_token")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (28.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091003043757')[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091003003201')[0m
