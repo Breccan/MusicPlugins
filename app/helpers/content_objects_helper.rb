@@ -1,0 +1,2 @@
+module ContentObjectsHelper
+end
