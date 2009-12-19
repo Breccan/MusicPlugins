@@ -1,3 +1,7 @@
+Users
+Primary Object < --- >> Categories
+
+
 Design
 Home page (list of things, ordered by time)
 signup (email, name)
