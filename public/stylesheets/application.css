@@ -1,0 +1,11 @@
+body { font-family: verdana, arial, sans-serif; font-size: 0.9em; }
+
+h3 { font-size: 1.6em; }
+p { margin-bottom: 12px; }
+
+#header { background: #000000; color: #ffffff; margin-bottom: 12px; width: 100%; }
+#header h1 { float: left; padding: 12px; }
+#header #login { text-align: right; padding: 12px; }
+#header a { color: #00ff00; }
+
+#content #show_item img {display: block; }

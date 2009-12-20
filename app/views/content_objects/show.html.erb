@@ -1,7 +1,14 @@
+  <div id="show_item">
+    <h3><%= @content_object.name %></h3>
 
-<%= @content_object.name %>
-<%= @content_object.description %>
-<%= image_tag @content_object.image.url, :width => 100, :height => 100 %>
-<%= link_to "Download", @content_object.content.url %>
-<%= link_to @content_object.homepage %>
-<%= link_to @content_object.video_url %>
+    <p><%= @content_object.description %></p>
+
+    <p>
+      <%= image_tag @content_object.image.url, :width => 100, :height => 100 %>
+    </p>
+    <p>
+      <%= link_to "Download", @content_object.content.url %>
+    </p>
+    <p><%= link_to @content_object.homepage %></p>
+    <p><%= link_to @content_object.video_url %></p>
+  </div>

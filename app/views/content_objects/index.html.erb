@@ -1,7 +1,10 @@
-<ul> 
-  <% @content_objects.each do |content_object| %>
-    <li><%= @content_object.name %></li>
-  <% end %>
-</ul>
-<%= will_paginate @content_objects %>
-Cake is delicious
+<div id="content_list">
+  <ul> 
+    <% @content_objects.each do |content_object| %>
+      <li>
+        <%= link_to(content_object.name, content_object_path(content_object)) %>
+      </li>
+    <% end %>
+  </ul>
+  <%= will_paginate @content_objects %>
+</div>
