@@ -6,7 +6,7 @@ class ContentObjectsController < ApplicationController
   end
 
   def show
-    
+    @content_object = ContentObject.find(params[:page]) || (flash[:error] = "No item with that id" and  redirect_to root_url)
   end
 
   def new
