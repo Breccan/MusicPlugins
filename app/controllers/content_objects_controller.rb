@@ -4,7 +4,7 @@ class ContentObjectsController < ApplicationController
   def index
     if params[:category_id]
       @content_objects = ContentObject.paginate(:page => params[:page], :conditions => ["category_id = ?", params[:category_id].to_i], :order => 'created_at desc')
-      @selected_category = Category.find(params[:category_id].to_i
+      @selected_category = Category.find(params[:category_id].to_i)
     else
       @content_objects = ContentObject.paginate(:page => params[:page], :order => 'created_at desc')
     end

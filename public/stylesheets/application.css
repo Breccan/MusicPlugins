@@ -22,3 +22,6 @@ p { margin-bottom: 12px; }
 #content #content_list a { color: #009900; }  
 #content #content_list li { border-bottom: 1px solid #000000; padding: 8px; }
 #content #content_list li.last { border-bottom: 0px; }
+
+#categories { float: right; width: 150px; border: 1px solid black; margin-right: 12px; }
+#categories li { padding: 4px; }

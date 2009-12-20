@@ -38,6 +38,18 @@
       <% else %>
         <%= render :partial => 'shared/register_login' %>
       <% end %>
+      
+      <div id="categories">
+        <ul>
+          <li><%= link_to("All", root_url)%>
+          <% @categories.each do |category| %>
+            <li>
+              <%= link_to(category[0], root_url(:category_id => category[1])) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      
       <div id="content">
         <%= yield %>
       </div>

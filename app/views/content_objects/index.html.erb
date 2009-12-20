@@ -1,7 +1,9 @@
-<%= tag_cloud %>
-
-
 <div id="content_list">
+  <% if @selected_category %>
+    <p>
+      <strong>Currently Viewing: <%=@selected_category.name %></strong>
+    </p>
+  <% end %>
   <ul> 
     <% @content_objects.each do |content_object| %>
       <li <%= (content_object == @content_objects.last) ? ' class="last" ' : '' %>>
@@ -10,4 +12,4 @@
     <% end %>
   </ul>
   <%= will_paginate @content_objects %>
-</div>s
+</div>
