@@ -6,7 +6,7 @@ class ContentObjectsController < ApplicationController
   end
 
   def show
-    @content_object = ContentObject.find(params[:id])
+    @content_object = ContentObject.find(params[:id], :include => :tags)
   end
 
   def new
