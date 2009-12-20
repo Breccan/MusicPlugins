@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+    
+    has_many :content_objects
+  
     acts_as_authentic do |c|
     end
 

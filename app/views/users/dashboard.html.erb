@@ -1,0 +1,11 @@
+
+  <div id="user_dashboard">
+    <ul>
+      <% @content_objects.each do |content_object| %>
+        <li>
+          <%= link_to(content_object.name, content_object_path(content_object)) %>
+          <span><%= link_to("Edit", edit_content_object_path(content_object))%>
+        </li>
+      <% end %>
+    </ul>
+  </div>

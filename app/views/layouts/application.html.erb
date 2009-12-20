@@ -8,6 +8,13 @@
     <%= yield(:head) %>
   </head>
   <body>
+    <!--[if lte IE 7]>
+      <h1>You are using an old version of Internet Explorer.</h1>
+      <p>Internet Explorer is very old, and doesn't support many of the modern web technologies we use n this site.</p>
+      
+      <p>While the site may be usable for you, we do not test this and make no guarantees. We highly recommend
+      upgrading to Firefox or Google Chrome for a safer, faster, prettier browsing experience.</p>
+    <![endif]-->
     <div id="container">
       <div id="header" class="clearfix">
         <h1><%= link_to(h(@title), root_url) %></h1>
@@ -26,7 +33,9 @@
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
-      
+      <% if @current_user %>
+        <%= render :partial => 'shared/user_tools' %>
+      <% end %>
       <div id="content">
         <%= yield %>
       </div>
