@@ -8,12 +8,17 @@ class ApplicationController < ActionController::Base
   helper_method :current_user_session, :current_user
   before_filter :current_user
   before_filter :set_title
+  before_filter :set_categories
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
   private
   
+  def set_categories
+    @categories = Category.all.map { |x| [x.name, x.id] }
+  end
+
   def set_title
     @title = "Music Plugin Webapp"
   end

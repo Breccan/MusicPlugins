@@ -2,7 +2,12 @@ class ContentObjectsController < ApplicationController
   before_filter :requires_login, :except => [:index, :show]
 
   def index
-    @content_objects = ContentObject.paginate(:page => params[:page], :order => 'created_at desc')
+    if params[:category_id]
+      @content_objects = ContentObject.paginate(:page => params[:page], :conditions => ["category_id = ?", params[:category_id].to_i], :order => 'created_at desc')
+      @selected_category = Category.find(params[:category_id].to_i
+    else
+      @content_objects = ContentObject.paginate(:page => params[:page], :order => 'created_at desc')
+    end
   end
 
   def show
@@ -11,7 +16,6 @@ class ContentObjectsController < ApplicationController
 
   def new
     @content_object = ContentObject.new
-    @categories = Category.all.map { |x| [x.name, x.id] }
   end
 
   def create
