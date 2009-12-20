@@ -1,6 +1,5 @@
 class AddActsAsTaggableTables < ActiveRecord::Migration 
   def self.up 
-    drop_table :tags
     create_table :tags do |t| 
       t.column :name, :string
       t.column :taggings_count, :integer, :default => 0, :null => false
