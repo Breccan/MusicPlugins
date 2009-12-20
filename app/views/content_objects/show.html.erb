@@ -11,5 +11,5 @@
     </p>
     <p><%= link_to @content_object.homepage %></p>
     <p><%= link_to @content_object.video_url %></p>
-    <p><%= @content_object.tags %> </p>
+    <p><%= @content_object.tags.join(', ') %> </p>
   </div> 

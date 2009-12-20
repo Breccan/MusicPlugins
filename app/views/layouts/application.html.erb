@@ -3,7 +3,7 @@
 <html>
   <head>
     <title><%= h(@title || "Music Plugin Webapp") %></title>
-    <%= stylesheet_link_tag 'reset', 'application' %>
+    <%= stylesheet_link_tag 'reset', 'application', 'forms', 'acts_as_taggable_stylesheet' %>
     <%= javascript_include_tag 'application', 'jquery' %>
     <%= yield(:head) %>
   </head>
@@ -35,6 +35,8 @@
       <%- end -%>
       <% if @current_user %>
         <%= render :partial => 'shared/user_tools' %>
+      <% else %>
+        <%= render :partial => 'shared/register_login' %>
       <% end %>
       <div id="content">
         <%= yield %>
