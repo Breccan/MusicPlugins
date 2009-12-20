@@ -6,7 +6,7 @@ class ContentObjectsController < ApplicationController
   end
 
   def show
-    @content_object = ContentObject.find(params[:page]) || (flash[:error] = "No item with that id" and  redirect_to root_url)
+    @content_object = ContentObject.find(params[:id])
   end
 
   def new
@@ -19,6 +19,7 @@ class ContentObjectsController < ApplicationController
     @content_object.user_id = @current_user.id
     if @content_object.save
       flash[:notice] = "Object successfully created"
+      redirect_to content_object_path(@content_object)
     else
       render :action => :new
     end

@@ -3,8 +3,8 @@
   <%= f.text_field :name %>
   <%= f.label :content, "File:" %>
   <%= f.file_field :content %>
-  <%= f.label :categories, "Categories:" %>
-  <%= f.select :categories, @categories %>
+  <%= f.label :category_id, "Category:" %>
+  <%= f.select :category_id, @categories %>
   <%= f.label :image, "Thumbnail:" %>
   <%= f.file_field :image %>
   <%= f.label :description, "Description:" %>
