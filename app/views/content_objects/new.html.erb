@@ -1,20 +1,38 @@
-<% form_for @content_object, :html => {:multipart => true, :method => :post} do |f| %>
-  <%= f.label :name, "Name:" %>
-  <%= f.text_field :name %>
-  <%= f.label :content, "File:" %>
-  <%= f.file_field :content %>
-  <%= f.label :category_id, "Category:" %>
-  <%= f.select :category_id, @categories %>
-  <%= f.label :image, "Thumbnail:" %>
-  <%= f.file_field :image %>
-  <%= f.label :description, "Description:" %>
-  <%= f.text_area :description %>
-  <%= f.label :homepage, "Homepage:" %>
-  <%= f.text_field :homepage %>
-  <%= f.label :video_url, "Video Url:" %>
-  <%= f.text_field :video_url %>
-  <%= f.label :tag_list, "Tags:" %>
-  <%= f.text_field :tag_list %>
+<div id="upload_form" class="form">
+  <% form_for @content_object, :html => {:multipart => true, :method => :post} do |f| %>
+  <div class="form_row">
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form_row">
+    <%= f.label :content, "File:" %>
+    <%= f.file_field :content %>
+  </div>
+  <div class="form_row">
+    <%= f.label :category_id, "Category:" %>
+    <%= f.select :category_id, @categories %>
+  </div>
+  <div class="form_row">
+    <%= f.label :image, "Thumbnail:" %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="form_row">
+    <%= f.label :description, "Description:" %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="form_row">
+    <%= f.label :homepage, "Homepage:" %>
+    <%= f.text_field :homepage %>
+  </div>
+  <div class="form_row">
+    <%= f.label :video_url, "Video Url:" %>
+    <%= f.text_field :video_url %>
+  </div>
+  <div class="form_row">
+    <%= f.label :tag_list, "Tags:" %>
+    <%= f.text_field :tag_list %>
+  </div>
 
-  <%= submit_tag %>
-<% end %>
+    <%= submit_tag %>
+  <% end %>
+</div>

@@ -8,19 +8,17 @@ p { margin-bottom: 12px; }
 #header #login { text-align: right; padding: 12px; }
 #header a { color: #00ff00; }
 
+
 #user_tools { font-size: 0.9em; float: left; border: 1px solid black; width: 120px; margin-left: 12px; }
-#user_tools li { margin-bottom: 4px; padding: 4px; border-bottom: 1px solid black; width: 100%; }
+#user_tools li { margin-bottom: 4px; padding: 4px; border-bottom: 1px solid black; }
 #user_tools li:last-child { border-bottom: 0px; }
 
-#user_dashboard { margin: 0px auto; width: 600px; border: 1px solid black; }
-#user_dashboard li { padding: 4px; border-bottom: 1px solid black; }
+#user_dashboard li { padding: 8px; border-bottom: 1px solid black; }
 #user_dashboard li:last-child { border-bottom: 0px; }
 #user_dashboard li span { float: right; text-align: right; font-size: 0.9em; display: block; }
 
-#content { padding: 4px 24px; }
+#content { margin: 0px auto; width: 600px; border: 1px solid black; }
 #content #show_item img { display: block; }
-#content #content_list { border: 1px solid #000000; background: #ffffff;
-  width: 600px; margin: 0px auto; }
 #content #content_list a { color: #009900; }  
 #content #content_list li { border-bottom: 1px solid #000000; padding: 8px; }
 #content #content_list li.last { border-bottom: 0px; }
