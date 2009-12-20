@@ -7,11 +7,17 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   before_filter :current_user
-
+  before_filter :set_title
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
   private
+  
+  def set_title
+    @title = "Music Plugin Webapp"
+  end
+  
 
   def requires_login
     redirect_to root_url unless current_user
