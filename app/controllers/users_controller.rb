@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
-
+  
+  before_filter :requires_login, :only => [:dashboard]
+  
+  def dashboard
+    @content_objects = current_user.content_objects
+  end
+  
   def new
     @user = User.new
   end

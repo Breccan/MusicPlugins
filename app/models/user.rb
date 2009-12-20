@@ -1,4 +1,6 @@
-class User < ActiveRecord::Base
+class User < ActiveRecord::Base    
+    has_many :content_objects
+    
     acts_as_tagger
     acts_as_authentic do |c|
     end

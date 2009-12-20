@@ -1,7 +1,7 @@
 <div id="content_list">
   <ul> 
     <% @content_objects.each do |content_object| %>
-      <li>
+      <li <%= (content_object == @content_objects.last) ? ' class="last" ' : '' %>>
         <%= link_to(content_object.name, content_object_path(content_object)) %>
       </li>
     <% end %>
