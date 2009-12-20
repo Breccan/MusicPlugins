@@ -11,6 +11,7 @@ class ContentObjectsController < ApplicationController
 
   def new
     @content_object = ContentObject.new
+    @categories = Category.all.map { |x| [x.name, x.id] }
   end
 
   def create

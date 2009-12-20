@@ -5,6 +5,8 @@
   <%= f.file_field :content %>
   <%= f.label :thumbnail, "Thumbnail:" %>
   <%= f.file_field :thumbnail %>
+  <%= f.label :categories, "Categories:" %>
+  <%= f.select :categories, @categories %>
   <%= f.label :description, "Description:" %>
   <%= f.text_area :description %>
   <%= f.label :homepage, "Homepage:" %>
